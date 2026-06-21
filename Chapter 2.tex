@@ -39,8 +39,11 @@ Bảng \ref{tab:openmp_mpi} tổng hợp các điểm khác biệt cốt lõi gi
 \textbf{Đặc điểm OpenMP} & \textbf{Đặc điểm MPI} \\
 \hline
 Hoạt động trên mô hình bộ nhớ chia sẻ (Shared Memory). & Hoạt động trên mô hình bộ nhớ phân tán (Distributed Memory). \\
+\hline
 Cơ chế Fork-Join sinh luồng từ một Master Thread. & Cơ chế Communicator và Rank để quản lý các tiến trình độc lập. \\
+\hline
 Giao tiếp ngầm thông qua vùng nhớ chung (cần quản lý biến shared/private). & Giao tiếp tường minh thông qua truyền tin nhắn (Point-to-Point, Collective). \\
+\hline
 Được sử dụng chủ yếu trong nội bộ một node. & Phù hợp mở rộng quy mô tính toán giữa nhiều máy chủ (inter-node). \\
 \hline
 \end{tabularx}

@@ -33,9 +33,13 @@ Việc khởi chạy tính toán trên GPU tuân theo quy trình 5 bước cơ b
 \textbf{Bước} & \textbf{Lệnh CUDA} & \textbf{Mô tả thao tác} \\
 \hline
 1 & \texttt{cudaMalloc} & Cấp phát bộ nhớ cho Device (Global Memory). \\
+\hline
 2 & \texttt{cudaMemcpy} & Sao chép dữ liệu đầu vào từ Host sang Device. \\
+\hline
 3 & Kernel Launch & Khởi chạy tiến trình tính toán song song trên GPU. \\
+\hline
 4 & \texttt{cudaMemcpy} & Lấy kết quả từ Device về lại Host. \\
+\hline
 5 & \texttt{cudaFree} & Giải phóng bộ nhớ VRAM để tránh rò rỉ. \\
 \hline
 \end{tabularx}

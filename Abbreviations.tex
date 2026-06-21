@@ -3,35 +3,66 @@
 
 \begin{table}[H]
     \centering
-    \begin{tabularx}{\textwidth}{l L{0.9} L{1.1}}
-    \textbf{AI} & Artificial Intelligence & Trí tuệ nhân tạo \\
-    \textbf{CP} & Context Parallelism & Song song theo ngữ cảnh \\
-    \textbf{CPU} & Central Processing Unit & Bộ xử lý trung tâm \\
-    \textbf{CUDA} & Compute Unified Device Architecture & Nền tảng tính toán song song của NVIDIA \\
-    \textbf{DDP} & Distributed Data Parallel & Song song dữ liệu phân tán \\
-    \textbf{DP} & Data Parallelism & Song song dữ liệu \\
-    \textbf{EP} & Expert Parallelism & Song song chuyên gia (trong MoE) \\
-    \textbf{FSDP} & Fully Sharded Data Parallel & Song song dữ liệu phân mảnh hoàn toàn \\
-    \textbf{GPGPU} & General-Purpose computing on GPU & Tính toán đa dụng trên GPU \\
-    \textbf{GPU} & Graphics Processing Unit & Bộ xử lý đồ họa \\
-    \textbf{HBM} & High Bandwidth Memory & Bộ nhớ băng thông cao \\
-    \textbf{LLM} & Large Language Model & Mô hình ngôn ngữ lớn \\
-    \textbf{MLA} & Multi-head Latent Attention & Cơ chế tự chú ý ẩn đa đầu \\
-    \textbf{MoE} & Mixture of Experts & Hỗn hợp các chuyên gia \\
-    \textbf{MPI} & Message Passing Interface & Giao diện truyền thông điệp \\
-    \textbf{MTP} & Multi-Token Prediction & Dự đoán đa token \\
-    \textbf{NCCL} & NVIDIA Collective Communications Library & Thư viện giao tiếp tập thể của NVIDIA \\
-    \textbf{NVSHMEM} & NVIDIA Shared Memory & Thư viện bộ nhớ dùng chung của NVIDIA \\
-    \textbf{OpenMP} & Open Multi-Processing & Giao diện lập trình ứng dụng đa luồng \\
-    \textbf{PGAS} & Partitioned Global Address Space & Không gian địa chỉ toàn cục phân vùng \\
-    \textbf{PP} & Pipeline Parallelism & Song song đường ống \\
-    \textbf{SIMD} & Single Instruction, Multiple Data & Một lệnh, đa dữ liệu \\
-    \textbf{SM} & Streaming Multiprocessor & Bộ đa xử lý luồng \\
-    \textbf{SRAM} & Static Random-Access Memory & Bộ nhớ truy cập ngẫu nhiên tĩnh \\
-    \textbf{TP} & Tensor Parallelism & Song song theo Tensor \\
-    \textbf{TTFT} & Time-to-First-Token & Thời gian tạo token đầu tiên \\
-    \textbf{VRAM} & Video Random Access Memory & Bộ nhớ truy cập ngẫu nhiên video \\
-    \textbf{ZeRO} & Zero Redundancy Optimizer & Trình tối ưu hóa triệt tiêu dư thừa \\
+    \begin{tabularx}{\textwidth}{|l|L{0.9}|L{1.1}|}
+        \hline
+        \textbf{Từ viết tắt} & \textbf{Thuật ngữ tiếng Anh} & \textbf{Ý nghĩa tiếng Việt} \\
+        \hline
+        \textbf{AI} & Artificial Intelligence & Trí tuệ nhân tạo \\
+        \hline
+        \textbf{CP} & Context Parallelism & Song song theo ngữ cảnh \\
+        \hline
+        \textbf{CPU} & Central Processing Unit & Bộ xử lý trung tâm \\
+        \hline
+        \textbf{CUDA} & Compute Unified Device Architecture & Nền tảng tính toán song song của NVIDIA \\
+        \hline
+        \textbf{DDP} & Distributed Data Parallel & Song song dữ liệu phân tán \\
+        \hline
+        \textbf{DP} & Data Parallelism & Song song dữ liệu \\
+        \hline
+        \textbf{EP} & Expert Parallelism & Song song chuyên gia (trong MoE) \\
+        \hline
+        \textbf{FSDP} & Fully Sharded Data Parallel & Song song dữ liệu phân mảnh hoàn toàn \\
+        \hline
+        \textbf{GPGPU} & General-Purpose computing on GPU & Tính toán đa dụng trên GPU \\
+        \hline
+        \textbf{GPU} & Graphics Processing Unit & Bộ xử lý đồ họa \\
+        \hline
+        \textbf{HBM} & High Bandwidth Memory & Bộ nhớ băng thông cao \\
+        \hline
+        \textbf{LLM} & Large Language Model & Mô hình ngôn ngữ lớn \\
+        \hline
+        \textbf{MLA} & Multi-head Latent Attention & Cơ chế tự chú ý ẩn đa đầu \\
+        \hline
+        \textbf{MoE} & Mixture of Experts & Hỗn hợp các chuyên gia \\
+        \hline
+        \textbf{MPI} & Message Passing Interface & Giao diện truyền thông điệp \\
+        \hline
+        \textbf{MTP} & Multi-Token Prediction & Dự đoán đa token \\
+        \hline
+        \textbf{NCCL} & NVIDIA Collective Communications Library & Thư viện giao tiếp tập thể của NVIDIA \\
+        \hline
+        \textbf{NVSHMEM} & NVIDIA Shared Memory & Thư viện bộ nhớ dùng chung của NVIDIA \\
+        \hline
+        \textbf{OpenMP} & Open Multi-Processing & Giao diện lập trình ứng dụng đa luồng \\
+        \hline
+        \textbf{PGAS} & Partitioned Global Address Space & Không gian địa chỉ toàn cục phân vùng \\
+        \hline
+        \textbf{PP} & Pipeline Parallelism & Song song đường ống \\
+        \hline
+        \textbf{SIMD} & Single Instruction, Multiple Data & Một lệnh, đa dữ liệu \\
+        \hline
+        \textbf{SM} & Streaming Multiprocessor & Bộ đa xử lý luồng \\
+        \hline
+        \textbf{SRAM} & Static Random-Access Memory & Bộ nhớ truy cập ngẫu nhiên tĩnh \\
+        \hline
+        \textbf{TP} & Tensor Parallelism & Song song theo Tensor \\
+        \hline
+        \textbf{TTFT} & Time-to-First-Token & Thời gian tạo token đầu tiên \\
+        \hline
+        \textbf{VRAM} & Video Random Access Memory & Bộ nhớ truy cập ngẫu nhiên video \\
+        \hline
+        \textbf{ZeRO} & Zero Redundancy Optimizer & Trình tối ưu hóa triệt tiêu dư thừa \\
+        \hline
     \end{tabularx}
 \end{table}
 \cleardoublepage

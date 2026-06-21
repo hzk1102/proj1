@@ -21,10 +21,15 @@ Việc phân bổ mô hình qua nhiều GPU phụ thuộc vào nhiều chiều k
 \textbf{Chiến lược} & \textbf{Đặc điểm hoạt động \& Cơ chế} \\
 \hline
 DP (Data) & Mỗi GPU giữ bản sao nguyên vẹn mô hình, xử lý data batch riêng rẽ. Gộp Gradient bằng Bucketed Ring All-Reduce. \\
+\hline
 FSDP / ZeRO & Băm nhỏ trọng số (Weights), Gradient, Optimizer chia qua các GPU. All-Gather để kéo trọng số về tính toán, sau đó Reduce-Scatter gộp kết quả và xóa vùng nhớ cục bộ. \\
+\hline
 PP (Pipeline) & Cắt ngang các tầng layer sâu của mô hình. Tối ưu bằng lịch trình 1F1B (One Forward, One Backward) hoặc Interleaved để giảm Pipeline Bubble. \\
+\hline
 TP (Tensor) & Cắt ma trận tính toán theo chiều dọc để các GPU tính trên cùng một layer. Đòi hỏi tốc độ mạng cực cao để đồng bộ tức thì. \\
+\hline
 CP (Context) & Băm nhỏ ngữ cảnh chuỗi đầu vào. Giải quyết bài toán Attention xuyên GPU qua Ring Attention hoặc DeepSpeed Ulysses. \\
+\hline
 EP (Expert) / MoE & Đẩy dữ liệu input qua một mạng Gating Network để chia Token tới các GPU chuyên gia thích hợp (All-to-All communication). \\
 \hline
 \end{tabularx}
@@ -42,10 +47,15 @@ Mặc dù dùng chung các chiến lược phân tán, hai pha vòng đời củ
 \textbf{Tiêu chí} & \textbf{Huấn luyện (Training)} & \textbf{Suy luận (Inference)} \\
 \hline
 Yêu cầu tính toán & Cần năng lực tính toán khổng lồ (Gradient, Optimizer, Forward \& Backward pass). & Tính toán nhẹ nhàng hơn, chủ yếu ở bước Prefill xây dựng KV Cache. \\
+\hline
 Áp lực bộ nhớ & Lưu trữ các biến trạng thái trung gian lớn (Activation Checkpointing). & Áp lực phụ thuộc chủ yếu vào độ dài chuỗi tạo ra KV Cache. \\
+\hline
 Giao tiếp \& Mạng & Cần đồng bộ liên tục toàn bộ cụm, băng thông giao tiếp lớn. & Yêu cầu kết nối inter-node thấp hơn, chú trọng phân tải (Load Balancing). \\
+\hline
 Sử dụng DP \& FSDP & FSDP chia nhỏ bộ nhớ phổ biến, các GPU liên tục cần All-Reduce đồng bộ. & Bản sao DP xử lý các request độc lập, FSDP không được áp dụng. \\
+\hline
 Lượng tử hóa & Rất hạn chế do nguy cơ over/underflow mất độ chính xác trọng số. & Phổ biến (Quantized Weights/KV Cache) để tăng tốc và giảm VRAM. \\
+\hline
 Mục tiêu hiệu năng & Tối ưu thời gian hoàn thành số Epoch. & Tối ưu độ trễ (Latency), Time-to-First-Token, Thông lượng (Throughput). \\
 \hline
 \end{tabularx}
