@@ -1,0 +1,135 @@
+Kế hoạch viết báo cáo Đồ án chuyên ngành I
+Bối cảnh
+Nguồn nội dung: [mail.txt](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\mail.txt) — chuỗi báo cáo tiến độ từ 03/2026 đến 06/2026 về hệ thống song song phân tán (CPU → GPU → framework huấn luyện/suy luận).
+Loại báo cáo: Chủ yếu khảo sát lý thuyết / tổng hợp tài liệu; có thể bổ sung thí nghiệm nếu kịp thời gian trước hạn nộp (15/06/2026). Bản đầu viết đầy đủ phần lý thuyết, kèm khung thí nghiệm placeholder để điền sau khi có kết quả.
+Template hiện tại: [main.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\main.tex) — tiếng Anh, 2 sinh viên, Viện Điện tử, References.bib cũ (ADC) chưa dùng, thiếu thư mục Figures/.
+flowchart TD
+    mailTxt[mail.txt - bản nháp email] --> transform[Biên tập học thuật tiếng Việt]
+    transform --> ch1[Chương 1: Cơ sở lý thuyết]
+    transform --> ch2[Chương 2: OpenMP và MPI]
+    transform --> ch3[Chương 3: GPU, CUDA, NCCL, NVSHMEM]
+    transform --> ch4[Chương 4: Framework + Train/Infer + placeholder thí nghiệm]
+    metaFiles[Cover, Abstract, Preface...] --> mainTex[main.tex]
+    ch1 --> mainTex
+    ch2 --> mainTex
+    ch3 --> mainTex
+    ch4 --> mainTex
+    refsBib[References.bib mới] --> mainTex
+    mainTex --> pdf[PDF nộp 15-06-2026]
+Thông tin cố định sẽ điền
+Mục
+Giá trị
+Sinh viên
+Nguyễn Hoàng — 20250130E — hoang.n250130e@sis.hust.edu.vn
+Lớp
+KS-GenAI-K69
+GVHD
+TS. Phạm Đăng Hải
+Ngày nộp
+15/06/2026
+Đề tài
+Nghiên cứu hệ thống tính toán song song phân tán cho huấn luyện và suy luận mô hình AI
+Trường đại học
+TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI (HANOI UNIVERSITY OF SCIENCE AND TECHNOLOGY)
+Đơn vị đào tạo
+Trường Công nghệ thông tin và Truyền thông (SOICT) — trực thuộc ĐHBKHN
+Ngôn ngữ
+Tiếng Việt (giữ thuật ngữ kỹ thuật tiếng Anh)
+Cấu trúc đơn vị trên trang bìa (2 dòng)
+TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI
+TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG
+(Tiếng Anh tương ứng: HANOI UNIVERSITY OF SCIENCE AND TECHNOLOGY / SCHOOL OF INFORMATION AND COMMUNICATION TECHNOLOGY)
+Bước 1 — Chuẩn hóa template (metadata + cấu trúc)
+[Cover page.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Cover page.tex)
+Đổi tiêu đề: BÁO CÁO ĐỒ ÁN CHUYÊN NGÀNH I (thay GRADUATION THESIS).
+Cập nhật 2 cấp đơn vị: dòng 1 = ĐHBKHN, dòng 2 = SOICT (thay SCHOOL OF ELECTRICAL AND ELECTRONIC ENGINEERING cũ).
+Bố cục 1 sinh viên (bỏ cột sinh viên thứ 2, giữ 2 trang bìa theo chuẩn in đôi).
+Điền tên đề tài, ngành Kỹ sư GenAI, GVHD, ngày Hà Nội, 15/06/2026.
+[G-T topic.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\G-T topic.tex)
+Phiếu giao đề tài 1 sinh viên, khối lớp K69, trường: SOICT — ĐHBKHN, nội dung đề tài tóm tắt 4 hướng nghiên cứu.
+[Preface.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Preface.tex), [Abstract.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Abstract.tex), [Pledge.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Pledge.tex)
+Viết Lời nói đầu, Tóm tắt (~200–300 từ), Lời cam đoan tiếng Việt.
+Bật \input{Pledge} trong [main.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\main.tex) (hiện đang comment).
+[main.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\main.tex)
+Đổi tiêu đề mục lục sang tiếng Việt: MỤC LỤC, DANH MỤC HÌNH, DANH MỤC BẢNG, TÀI LIỆU THAM KHẢO.
+Thêm \usepackage[sort&compress]{natbib} hoặc biblatex phù hợp; thay khối thebibliography mẫu bằng:
+\bibliographystyle{IEEEtran}
+\bibliography{References}
+Giữ T5 fontenc (đã hỗ trợ tiếng Việt).
+[Abbreviations.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Abbreviations.tex)
+Danh mục ~20 viết tắt: MPI, OpenMP, CUDA, SM, VRAM, DDP, FSDP, TP, PP, CP, EP, NCCL, NVSHMEM, ZeRO, PGAS, MoE, KV cache, ...
+[Duty roster.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Duty roster.tex)
+1 sinh viên — bảng phân công theo 4 chương + tổng hợp tài liệu (thay A and B mẫu).
+Bước 2 — Viết nội dung 4 chương (từ mail.txt)
+Nội dung email sẽ được biên tập học thuật (không copy nguyên văn chat), thêm mở đầu/kết luận chương, liên kết logic giữa các phần.
+Chương 1 — Giới thiệu và cơ sở lý thuyết tính toán song song
+File: [Chapter 1.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Chapter 1.tex)
+Đặt vấn đề: bùng nổ mô hình AI → cần tính toán song song phân tán.
+Mục tiêu: (1) Tổng hợp kiến thức nền tảng và các framework phân tán; (2) Dự kiến thực hiện thí nghiệm minh họa nếu đủ thời gian.
+Phạm vi: Ưu tiên nghiên cứu lý thuyết (đọc tài liệu LLNL, sách CUDA, paper arXiv). Phần thí nghiệm để ngỏ — không khẳng định cứng có/không trong bản nộp đầu; nếu chưa kịp thì ghi rõ hạn chế và hướng thí nghiệm đề xuất.
+Phương pháp: Đọc tài liệu, phân tích so sánh; thí nghiệm (nếu có): benchmark đơn giản trên GPU/CPU hoặc chạy demo PyTorch DDP.
+Khái niệm cơ bản: kiến trúc von Neumann, phân loại Flynn, kiến trúc bộ nhớ (Shared / Distributed / Hybrid).
+Mô hình lập trình song song; cấu trúc báo cáo (nêu rõ vị trí mục thí nghiệm dự kiến).
+Chương 2 — Lập trình song song trên CPU: OpenMP và MPI
+File: [Chapter 2.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Chapter 2.tex)
+OpenMP: shared memory, fork-join, biến shared/private.
+MPI: distributed memory, communicator, rank, Point-to-Point, Collective.
+Kết hợp OpenMP + MPI trên siêu máy tính hiện đại.
+Bảng so sánh OpenMP vs MPI (dùng tabularx có sẵn trong template).
+Chương 3 — Lập trình GPU và giao tiếp liên GPU
+File: [Chapter 3.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Chapter 3.tex)
+GPU/GPGPU, SIMD, ứng dụng deep learning.
+CUDA: Host–Device, quy trình 5 bước (cudaMalloc → cudaFree).
+Kiến trúc GPU: SM, warp, L2, Global Memory; Grid–Block–Thread.
+NCCL: collective, All-Reduce, NVLink/InfiniBand, tích hợp PyTorch DDP.
+NVSHMEM: PGAS, put-get một phía, symmetric heap, đồng bộ hóa.
+Sơ đồ TikZ đơn giản mô hình Host–Device (không cần ảnh ngoài).
+Chương 4 — Hệ thống huấn luyện và suy luận phân tán
+File: [Chapter 4.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Chapter 4.tex)
+Tổng quan framework: PyTorch Distributed, DeepSpeed, Megatron-LM, Ray Train.
+Chiến lược song song:
+DP / FSDP (Bucketed Ring All-Reduce, sharding weights/gradient/optimizer)
+TP, PP (1F1B, Interleaved Pipeline)
+CP (Ring Attention, Ulysses / DeepSpeed-Ulysses)
+EP / MoE (DeepSpeed-MoE)
+DeepSpeed: ZeRO 1/2/3, Offload/Infinity, ZeRO++, DeepCompile.
+Megatron Core: lịch sử các chiến lược, Parallel Folding, Dynamic CP.
+So sánh Training vs Inference: compute, memory (gradient vs KV cache), network, DP khác nhau, quantization, latency.
+Mục 4.X — Thí nghiệm minh họa (placeholder): Khung sẵn để bổ sung sau, gồm:
+Mục tiêu thí nghiệm đề xuất (ví dụ: so sánh thời gian train 1 epoch DDP 2 GPU vs 1 GPU; hoặc kernel CUDA vector add).
+Môi trường thực nghiệm (phần cứng, phần mềm) — để trống hoặc ghi "Dự kiến".
+Bảng kết quả mẫu (cột trống) + hình placeholder — dễ thay bằng số liệu thật khi có.
+Nếu chưa có dữ liệu lúc nộp: 1–2 đoạn "Hạn chế" + "Hướng thí nghiệm tiếp theo" thay vì bỏ hẳn mục này.
+Kết luận chung + hướng phát triển (bổ sung thí nghiệm, Triton, FlashAttention chi tiết hơn).
+[Appendix.tex](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\Appendix.tex) (tùy chọn)
+Có thể đặt mã nguồn / log chạy thí nghiệm tại đây khi hoàn thành; hiện để khung trống hoặc ghi chú "Sẽ cập nhật".
+Bước 3 — Hình ảnh, bảng và tài liệu tham khảo
+Thư mục Figures/
+Tạo thư mục; thêm logoBK.png (logo HUST/Bách khoa — tải hoặc dùng placeholder tạm).
+Xóa tham chiếu Fig0.png mẫu trong Chương 1; thay bằng sơ đồ TikZ/bảng thực tế.
+Bảng và hình dự kiến (tối thiểu 4–6)
+Bảng so sánh OpenMP vs MPI
+Bảng quy trình CUDA 5 bước
+Bảng các chiến lược song song (DP, FSDP, TP, PP, CP, EP)
+Bảng so sánh Training vs Inference
+Sơ đồ kiến trúc Grid–Block–Thread (TikZ)
+[References.bib](d:\Google Drive\Other computers\My Laptop\HustDoc\Others\Proj1\Bao cao Do An chuyen nganh 1\References.bib)
+Thay toàn bộ nội dung ADC cũ bằng tài liệu từ mail và chuẩn IEEE:
+Li et al. — PyTorch Distributed (arXiv:2006.15704)
+Rajbhandari et al. — ZeRO (arXiv:1910.02054)
+Shoeybi et al. — Megatron-LM (arXiv:1909.08053)
+Dao et al. — FlashAttention (arXiv:2205.14135)
+Narayanan et al. — GPipe; PipeDream; Ring Attention; Switch Transformer; NCCL/NVSHMEM docs
+Trích dẫn trong text bằng \cite{...}.
+Bước 4 — Kiểm tra biên dịch
+Chạy chuỗi lệnh trên Windows:
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+Sửa lỗi encoding tiếng Việt, thiếu ảnh, citation undefined.
+Xác nhận: mục lục, danh mục hình/bảng, số trang, trích dẫn đầy đủ.
+Lưu ý quan trọng
+Thí nghiệm — để ngỏ: Bản báo cáo hoàn chỉnh phần lý thuyết trước; mục thí nghiệm dùng khung placeholder (bảng/hình trống + mô tả dự kiến). Không bịa số liệu. Khi có kết quả thật, chỉ cần điền vào khung sẵn trong Chương 4 / Phụ lục.
+Chất lượng văn bản: Chuyển giọng email ("em thấy", "tuần vừa rồi") sang văn phong báo cáo ("nghiên cứu cho thấy", "phân tích được thực hiện").
+Assessment.tex: Không nằm trong main.tex — giữ nguyên (dành cho GV chấm, không nộp trong báo cáo chính trừ khi bạn yêu cầu).
+Logo: Nếu không có file logo, dùng placeholder hoặc bạn cung cấp ảnh sau — không chặn việc biên dịch phần nội dung.

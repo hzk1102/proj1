@@ -1,0 +1,20 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.synctex
+*unzipped.synctex*
+*unzipped_unzipped*
+
+# Editor & system files
+.continue/
+.DS_Store
+Thumbs.db

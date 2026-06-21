@@ -1,0 +1,55 @@
+\section{Hệ thống huấn luyện và suy luận phân tán}
+
+\subsection{Tổng quan các Framework phân tán}
+Hệ sinh thái mã nguồn mở cho huấn luyện phân tán hiện được dẫn dắt bởi một số framework chủ chốt:
+\begin{itemize}
+    \item \textbf{PyTorch Distributed:} Cung cấp sẵn các lớp cơ sở hạ tầng (như DDP, FSDP, TP) giúp dễ dàng khởi chạy, cắt nhỏ dữ liệu hoặc chia khối mô hình cho các GPU.
+    \item \textbf{DeepSpeed (Microsoft):} Hoạt động như lớp trung gian tối ưu hóa, nổi tiếng với công nghệ ZeRO giúp giảm đáng kể áp lực bộ nhớ. Nó mở rộng từ huấn luyện sang tối ưu hóa suy luận (DeepSpeed-FastGen, DeepSpeed-Chat).
+    \item \textbf{Megatron-LM / Megatron Core (NVIDIA):} Mã nguồn tiêu chuẩn công nghiệp cho việc huấn luyện quy mô lớn, tích hợp các kiến trúc song song tiên tiến và hiệu quả nhất cho các chip của NVIDIA.
+    \item \textbf{Ray Train:} Quản lý tài nguyên, điều phối quá trình huấn luyện ở quy mô cụm cluster.
+\end{itemize}
+
+\subsection{Các chiến lược song song hóa}
+Việc phân bổ mô hình qua nhiều GPU phụ thuộc vào nhiều chiều không gian cắt (Sharding). Bảng \ref{tab:parallel_strategies} tóm tắt các kỹ thuật nổi bật nhất.
+
+\begin{table}[H]
+\centering
+\caption{Tổng hợp các chiến lược song song hóa trên mô hình AI}
+\label{tab:parallel_strategies}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Chiến lược} & \textbf{Đặc điểm hoạt động \& Cơ chế} \\
+\hline
+DP (Data) & Mỗi GPU giữ bản sao nguyên vẹn mô hình, xử lý data batch riêng rẽ. Gộp Gradient bằng Bucketed Ring All-Reduce. \\
+FSDP / ZeRO & Băm nhỏ trọng số (Weights), Gradient, Optimizer chia qua các GPU. All-Gather để kéo trọng số về tính toán, sau đó Reduce-Scatter gộp kết quả và xóa vùng nhớ cục bộ. \\
+PP (Pipeline) & Cắt ngang các tầng layer sâu của mô hình. Tối ưu bằng lịch trình 1F1B (One Forward, One Backward) hoặc Interleaved để giảm Pipeline Bubble. \\
+TP (Tensor) & Cắt ma trận tính toán theo chiều dọc để các GPU tính trên cùng một layer. Đòi hỏi tốc độ mạng cực cao để đồng bộ tức thì. \\
+CP (Context) & Băm nhỏ ngữ cảnh chuỗi đầu vào. Giải quyết bài toán Attention xuyên GPU qua Ring Attention hoặc DeepSpeed Ulysses. \\
+EP (Expert) / MoE & Đẩy dữ liệu input qua một mạng Gating Network để chia Token tới các GPU chuyên gia thích hợp (All-to-All communication). \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Phân tích đặc thù: Huấn luyện (Training) vs Suy luận (Inference)}
+Mặc dù dùng chung các chiến lược phân tán, hai pha vòng đời của AI có yêu cầu tối ưu hoàn toàn trái ngược. Bảng \ref{tab:train_vs_infer} phân tích chi tiết sự khác biệt này.
+
+\begin{table}[H]
+\centering
+\caption{So sánh đặc điểm hệ thống giữa Huấn luyện và Suy luận}
+\label{tab:train_vs_infer}
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\textbf{Tiêu chí} & \textbf{Huấn luyện (Training)} & \textbf{Suy luận (Inference)} \\
+\hline
+Yêu cầu tính toán & Cần năng lực tính toán khổng lồ (Gradient, Optimizer, Forward \& Backward pass). & Tính toán nhẹ nhàng hơn, chủ yếu ở bước Prefill xây dựng KV Cache. \\
+Áp lực bộ nhớ & Lưu trữ các biến trạng thái trung gian lớn (Activation Checkpointing). & Áp lực phụ thuộc chủ yếu vào độ dài chuỗi tạo ra KV Cache. \\
+Giao tiếp \& Mạng & Cần đồng bộ liên tục toàn bộ cụm, băng thông giao tiếp lớn. & Yêu cầu kết nối inter-node thấp hơn, chú trọng phân tải (Load Balancing). \\
+Sử dụng DP \& FSDP & FSDP chia nhỏ bộ nhớ phổ biến, các GPU liên tục cần All-Reduce đồng bộ. & Bản sao DP xử lý các request độc lập, FSDP không được áp dụng. \\
+Lượng tử hóa & Rất hạn chế do nguy cơ over/underflow mất độ chính xác trọng số. & Phổ biến (Quantized Weights/KV Cache) để tăng tốc và giảm VRAM. \\
+Mục tiêu hiệu năng & Tối ưu thời gian hoàn thành số Epoch. & Tối ưu độ trễ (Latency), Time-to-First-Token, Thông lượng (Throughput). \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Kết luận}
+Chương này đã đi sâu vào cách kết hợp và hiện thực hóa các lý thuyết song song thông qua các Framework tiên tiến nhất. Nghiên cứu cũng chỉ ra rằng việc tối ưu hệ thống cần xem xét đến các khác biệt cốt lõi giữa hai pha huấn luyện và suy luận để áp dụng các chiến lược như DP, PP, FSDP hay Quantization một cách hiệu quả nhất.

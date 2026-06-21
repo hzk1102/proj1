@@ -1,0 +1,396 @@
+On Mon, 9 Mar 2026 at 20:09, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em chào thầy,
+
+Em là Nguyễn Hoàng đang học lớp KS-GenAI-K69.
+Kì này em đăng ký môn đồ án chuyên ngành I thì thấy trên hệ thống thầy là GVHD.
+Trước em chưa học môn đồ án chuyên ngành nào nên không rõ học phần này học như nào, mong thầy hướng dẫn ạ.
+
+
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Monday, March 9, 2026 10:35:38 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Cc: Phạm Đăng Hải <hai.phamdang@hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+OK em
+Tuần này tôi rảnh vào sáng thứ 5 (10h30-11h30). Nếu em vướng lịch thì chúng ta sẽ hẹn vào lúc  khác cũng được
+Đăng Hải
+From: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Sent: Tuesday, March 10, 2026 1:28 PM
+To: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Cc: Phạm Đăng Hải <hai.phamdang@hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Dạ vâng thời gian đó em thấy ok ạ
+
+Sent from Outlook for iOS
+On Tue, 10 Mar 2026 at 17:27, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Cho em hỏi thêm là sẽ hẹn ở đâu ạ? Nếu là ở trường thì cụ thể là ở phòng nào ạ?
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Tuesday, March 10, 2026 11:09 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Cc: Phạm Đăng Hải <hai.phamdang@hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Tại văn phòng tôi. 704-B1
+HaiPhD
+On Wed, 11 Mar 2026 at 00:28, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em cảm ơn ạ.
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Wednesday, 11 March 2026 22:12:44
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Cc: Phạm Đăng Hải <hai.phamdang@hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Chào em
+    Do sáng mai tôi có lịch họp đột xuất từ 10h30. Do vậy, hoặc em đến sau 11h15 (có thể phải đợi một chút), hoặc em đến vào buổi chiều nhé (sau 14h00, tại 704-B1)
+
+Đăng Hải
+From: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Sent: Thursday, March 12, 2026 10:25 AM
+To: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Cc: Phạm Đăng Hải <hai.phamdang@hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+11h15 em đến đợi, đợi một chút không sao. Bao giờ thầy đến thì bảo em ạ.
+
+Thanks,
+
+Sent from Outlook for iOS
+On Thu, 19 Mar 2026 at 16:05, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em chào thầy,
+
+Theo như buổi trước họp với thầy, thầy khuyên em về tìm hiểu về các vấn đề
+
+"- Lập trình hệ thống song song phân tán, GPU, CUDA, lập trình đa lõi.
+- Đọc các bài báo liên quan để hiểu cách lập trình chúng hoạt động như thế nào."
+
+Em đã tìm tài liệu và lập ra các hướng học như sau:
+1 Hiểu về Lập trình Đa lõi (Multi-core Programming) trên CPU
+    Học theo các tài liệu miễn phí trên google của môn học Tính Toán Song Song (MI4364) 
+    Tìm hiểu thư viện xử lí song song multiprocessing và concurrent.futures của Python
+2 Lập trình GPU & CUDA
+    Tham khảo sách Programming Massively Parallel Processors (David B. Kirk & Wen-mei W. Hwu) (Free edition - https://www.cse.iitd.ac.in/~rijurekha/col730_2022/cudabook.pdf)
+    Xem các khóa học về CUDA trên https://developer.nvidia.com/educators/existing-courses
+    Tham khảo tài liệu trên https://github.com/gpu-mode/lectures
+    Làm theo OpenAI Triton tutorials https://triton-lang.org/main/getting-started/tutorials/index.html
+3 Huấn luyện song song và phân tán
+    Đọc pytorch tutorials https://docs.pytorch.org/tutorials/beginner/dist_overview.html
+    Tìm hiểu về Microsoft DeepSpeed https://www.deepspeed.ai/
+    Tìm đọc các phần liên quan trong Designing Machine Learning Systems (Chip Huyen) https://18636251.s21i.faiusr.com/61/ABUIABA9GAAghIK0ugYowM2h3QY.pdf
+4 Tìm đọc các bài báo liên quan, em mới tìm được 1 số bài tiêu đề có vẻ liên quan thôi ạ, em chưa vào đoc chi tiết nên cũng không chắc lắm
+    PyTorch Distributed: Experiences on Accelerating Data Parallel Training https://arxiv.org/pdf/2006.15704
+    ZeRO: Memory Optimizations Toward Training Trillion Parameter Models https://arxiv.org/pdf/1910.02054
+    Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism https://arxiv.org/pdf/1909.08053
+    FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness https://arxiv.org/pdf/2205.14135
+
+Em mới dự định như vậy thôi ạ mà em không rõ có đúng hướng không. Mong thầy review và cho em lời khuyên ạ.
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Thursday, March 19, 2026 10:54 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Cc: Phạm Đăng Hải <hai.phamdang@hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Chào em
+
+Em đi đúng hướng rồi đấy. Việc tiếp theo là em tập trung vào đọc tài liệu để vỡ ra được các kiến thức cần thiết. Sau đó quyết định đi sâu vào 01 chủ đề cụ thể
+
+Đăng Hải
+On Sat, 28 Mar 2026 at 00:24, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em chào thầy,
+
+Tuần vừa rồi em bắt đầu tìm hiểu về tính toán song song.
+Ban đầu em định tìm tài liệu của môn Tính Toán Song Song (MI4364)  - HUST nhưng gặp khó khăn vì môn này không có trong chương trình học của em, tài liệu free liên quan đến môn này trên mạng khá vụn vặt, chủ yếu là slide sinh viên up lên, thiếu rất nhiều.
+Do vậy em chuyển qua đọc Introduction to Parallel Computing Tutorial của bên
+https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial
+
+Qua đó em hiểu được các khái niệm cơ bản về:
+Parallel Computing Overview
+Concepts and Terminology (von Neumann Computer Architecture, Flynn’s Taxonomy, ...)
+Parallel Computer Memory Architectures (Shared, Distributed, Hybrid...)
+Parallel Programming Models (Có hai  là OpenMP và Message Passing Interface (MPI))
+Designing Parallel Programs
+
+Tiếp theo, em định sẽ tìm hiểu thêm về về OpenMP và MPI ở trên vì em đoán là quan trọng, cũng lấy nguồn từ đây vì em thấy có vẻ quan trọng
+https://hpc-tutorials.llnl.gov/mpi/
+https://hpc-tutorials.llnl.gov/openmp/
+Và có thể thêm cả các thư viện xử lí song song multiprocessing và concurrent.futures của Python như plan ban đầu.
+
+Như trên là kết quả tìm hiểu của em  trong thời gian vừa qua cũng như định hướng tiếp theo.
+Mong được thầy cho lời khuyên ạ.
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Monday, March 30, 2026 11:50 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+OK em
+Cảm ơn em đã báo cáo tiến độ đầy đủ
+Đăng Hải
+On Sun, 5 Apr 2026 at 17:25, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em chào thầy,
+
+Tuần vừa rồi em tìm hiểu về openmp và mpi, em chủ yếu tìm hiểu các khái niệm và cách thức hoạt động chứ không đi sâu vào code ạ.
+
+OpenMP (open Multi-Processing) em thấy được sử dụng cho các hệ thống có kiến trúc shared memory, dùng chung bộ nhớ. OpenMP  sử dụng cơ chế Fork-Join, từ một master thread ban đầu phân nhánh ra các thread nhỏ để chạy song song, sau đó gộp lại khi đã hoàn thành. Vì dùng chung memory, để tránh xung đột, OpenMP có cơ chế giúp thiết lập biến nào là dùng chung, biến nào là riêng tư. Với biến riêng tư, mỗi luồng sẽ được cấp một bản sao độc lập trên bộ nhớ để tự do tính toán.
+
+MPI (message passing interface) thì lại tập trung vào xử lí giao tiếp, truyền tin nhắn trong tính toán song song và hoạt động trên kiến trúc distributed memory, mỗi process sử dụng memory riêng. MPI sử dụng cơ chế communicators và rank để định danh các process, từ đó các process giao tiếp với nhau qua các phương thức Point-to-Point, Collective Communication để phục vụ cho việc xử lí các bài toán song song.
+
+Nhìn chung, cả OpenMP và MPI đều phục vụ cho bài toán tính toán song song. Các hệ thống siêu máy hiện tại thường kết hợp cả hai, trong từng máy thì dùng OpenMP, với các máy với nhau thì dùng MPI. Tuy nhiên theo như em tìm hiểu, việc tính toán song song với các thư viện OpenMP/MPI chủ yếu được áp dụng tính toán song song cho CPU.
+
+Tiếp theo em sẽ tìm hiểu sang
+Lập trình GPU & CUDA
+    Tham khảo sách Programming Massively Parallel Processors (David B. Kirk & Wen-mei W. Hwu) (Free edition - https://www.cse.iitd.ac.in/~rijurekha/col730_2022/cudabook.pdf)
+    Xem các khóa học về CUDA trên https://developer.nvidia.com/educators/existing-courses
+    Tham khảo tài liệu trên https://github.com/gpu-mode/lectures
+    Làm theo OpenAI Triton tutorials https://triton-lang.org/main/getting-started/tutorials/index.html
+
+Như trên là kết quả tìm hiểu của em  trong thời gian vừa qua cũng như định hướng tiếp theo.
+Mong được thầy cho lời khuyên ạ.
+
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Monday, April 6, 2026 8:43 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+OK em
+- Các nhận xét của em về OpenMP và MPI đều hợp lý.
+- Hiện tại, người ta đang tập trung nhiều vào các bộ VXL đa lõi (GPGPU). Do vậy  em tìm hiểu về GPU và CUDA là hợp lý rồi
+Đăng Hải
+On Mon, 13 Apr 2026 at 00:35, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em chào thầy,
+
+Tuần vừa rồi em chưa có nhiều tiến triển so với trước.
+Em mới chủ yếu đọc các bài giới thiệu tổng quan về tính toán song song cho GPU dựa trên SIMD và lập trình Cuda. Vì nhờ kiến trúc rất nhiều lõi và không tập trung vào xử lý MIMD, GPU phù hợp với việc tính toán nhiều phép tính song song như nhân ma trận lớn, qua đó phù hợp với việc train các mô hình deep learning.
+Em đã dành nhiều thời gian cho môn khác do sát lịch trình bày proj. Em thành thật nhận lỗi vì đã phân bổ thời gian không hợp lí và sẽ bố trí cover sau vào đợt nghỉ giữa kỳ sắp tới ạ.
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Tuesday, April 14, 2026 9:54 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+OK em. 
+Thỉnh thoảng có những tuần tiến độ không đạt như ý muốn cũng bình thường. Tuần khác sẽ bù vào sau :-)
+From: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Sent: Tuesday, April 14, 2026 10:10 PM
+To: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Em cảm ơn thầy đã thấu hiểu ạ.
+
+Thanks,
+Hoang Nguyen
+From: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Sent: Tuesday, April 21, 2026 1:56 AM
+To: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Em chào thầy,
+
+Tuần trước em tìm hiểu về GPU computing, em chủ yếu follow bài giảng trên
+https://www.youtube.com/playlist?list=PLRRuQYjFhpmubuwx-w8X964ofVkW1T8O4
+cũng dựa trên sách Programming Massively Parallel Processors: A Hands-on Approach.
+Em tìm hiểu mô hình hoạt động CPU-GPU:
+Host và Device: Trong CUDA, CPU và bộ nhớ RAM của máy tính được gọi là Host. GPU và bộ nhớ VRAM của nó được gọi là Device (Global Memory). Chúng là 2 vùng nhớ độc lập và không thể đọc trực tiếp của nhau (trừ khi dùng kỹ thuật nâng cao). Chúng nối với nhau qua cáp PCIe.
+Quy trình 5 bước của CUDA: 
+1. Cấp phát bộ nhớ trên GPU (cudaMalloc).
+2. Copy dữ liệu đầu vào từ CPU sang GPU (cudaMemcpy).
+3. Khởi chạy tính toán trên GPU (Gọi Kernel).
+4. Copy dữ liệu kết quả từ GPU về lại CPU (cudaMemcpy).
+5. Giải phóng bộ nhớ trên GPU (cudaFree).
+Biết được kiến trúc tổng quan của GPU. Một GPU được cấu tạo từ:
+Streaming Multiprocessors:
+SM chứa nhiều lõi tính toán (Cores / ALUs),
+Shared memory / L1 Cache và Control logic.
+Bên trong SM, 32 thread được nhóm lại thành 1 warp để chạy chung theo cơ chế SIMD.
+L2 Cache: Bộ nhớ đệm dùng chung cho toàn bộ con chip GPU, nằm ở trung tâm để làm trạm trung chuyển dữ liệu giữa VRAM và các lõi xử lý.
+Global Memory: Toàn bộ các SM trên GPU đều được kết nối và dùng chung một bộ nhớ VRAM
+
+Cấu trúc tính toán thành 3 tầng từ vĩ mô đến vi mô: 
+Grid : Cấp độ quản lý cao nhất, chứa toàn bộ các Blocks được sinh ra trong một lần gọi hàm Kernel. Các Blocks trong cùng một Grid hoạt động hoàn toàn độc lập, không thể đồng bộ hóa chéo giữa Block này với Block khác.
+Block : Một nhóm chứa nhiều Threads, chúng có thể đồng bộ hóa lịch trình với nhau, và dùng chung một vùng nhớ tốc độ cực cao gọi là Shared Memory.
+Thread : Đơn vị thực thi nhỏ nhất và cơ bản nhất. Mỗi luồng sở hữu các thanh ghi (Registers) và vùng Local Memory hoàn toàn độc lập, không luồng nào khác có thể đọc được.
+
+Em sẽ tiếp tục follow các bài giảng trên này trong đợt nghĩ giữa kỳ và nghỉ lễ. Em xin phép được báo cáo lần tiếp theo vào cuối tuần sau/ cuối tháng này, vậy cũng tránh làm phiền thầy trong đợt này ạ.
+
+Thanks,
+Hoang Nguyen
+On Mon, 4 May 2026 at 02:18, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em chào thầy,
+
+Thời gian vừa qua em tìm hiểu về các chuẩn/thư viện hỗ trợ NVIDIA GPU communication và parallel programming, cụ thể là NCCL và NVSHMEM.
+
+NCCL (NVIDIA Collective Communications Library) là một thư viện hỗ trợ inter-GPU communication dành riêng cho hệ sinh thái cuda. Nó dựa trên các các phương thức giao tiếp nguyên thủy của MPI nhưng được tùy chỉnh, tối ưu, cải tiến để phù hợp với multi NVIDIA GPU, tập trung mạnh mẽ vào giao tiếp tập thể (Collectives) như All-Reduce, All-Gather, Broadcast, Reduce-Scatter để tối ưu cho AI training.
+NCCL hỗ trợ nhiều hơn về công nghệ kết nối khác nhau như PCIe, NVLINK, InfiniBand Verbs, IP sockets, giúp cung cấp kết nối tốc độ cao giữa nhiều GPU cả trong 1 node và giữa các node khác nhau
+VÌ cùng nằm trong hệ sinh thái NVIDIA, NCCL cũng hỗ trợ CUDA Stream Semantics, cụ thể operation status có thể được truy vấn bằng CUDA semantics như gọi cudaStreamSynchronize  hay dùng CUDA events.
+Nhờ những điều trên, NNCL được sử dụng rộng rãi trong neural network training và được tích hợp sâu vàoTorch Distributed (DDP) và các framework AI lớn để huấn luyện song song.
+
+NVSHMEM - Nvidia Share Memory (dựa trên OpenSHMEM) cũng dùng cho parallel programming và NVIDIA GPU communication, nhưng khác với NCCL (dựa trên MPI, mô hình  2 side communication send - receive, phức tạp), NVSHMEM dùng mô hình 1 side put-get, không cần bên nhận đồng ý nên nhanh, linh hoạt hơn. Để đạt được điều này NVSHMEM sử dụng partitioned global address space (PGAS) parallel programming model và symmetric heap/memory , tổng hợp bộ nhớ của nhiều GPU trong một cụm thành PGAS cho phép di chuyển và đồng bộ hóa dữ liệu GPU-GPU chi tiết từ bên trong nhân CUDA. Nó cho phép GPU truy xuất thẳng vào bộ nhớ của một GPU khác bằng pointer y như đang đọc bộ nhớ của chính nó.
+NVSHMEM hoạt động trên cơ chế bất đồng bộ, có thể song song trên nhiều GPU và giao tiếp trực tiếp với nhau không qua CPU nên nhanh nhưng bù lại người lập trình phải xử lí nhiều để tránh bị xung đột/lỗi/deadlock... như dùng các cơ chế/hàm như Atomic Memory Operations, Barriers, wait, quiet, Sync...
+
+Trên đây là những gì em đã tìm hiểu về các thư viện hỗ trợ huấn luyện song song phân tán cho NVIDIA GPU. Nếu thầy không thấy còn vấn đề gì, tiếp theo em sẽ chuyến sang tìm hiểu về các hệ thống huấn luyện song song phân tán.
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Thursday, May 7, 2026 4:55 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+OK em. Em cứ tiếp tục tiến trình công việc nhé
+Đăng Hải
+On Mon, 11 May 2026 at 01:54, Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn> wrote:
+Em chào thầy,
+
+Thời gian vừa qua, em research về các thư viện phổ biến được dùng để hỗ trợ việc huấn luyện song song, phân tán. Hiện nay phổ biến nhất theo như em tìm hiểu được thì có 
+PyTorch Distributed thư viện bao gồm một tập hợp các mô-đun song song, lớp truyền thông và cơ sở hạ tầng để khởi chạy và gỡ lỗi các công việc train model lớn (DDP, FSDP, TP, PP). Chúng cắt nhỏ các thành phần dữ liệu, gradients, optimizer, layer của mô hình để chia ra xử lí/train trên các GPU khác nhau.
+DeepSpeed (by Microsoft) - một thư viện tối ưu hóa huấn luyện deep learning, hoạt động như một lớp trung gian nằm giữa mô hình DL và framework huấn luyện (chủ yếu là PyTorch), sử dụng công nghệ lõi ZeRO (Zero Redundancy Optimizer) giúp triệt tiêu sự dư thừa bộ nhớ (Data Parallel)
+Nvidia/megatron-lm là mã nguồn của NVIDIA được thiết kế để huấn luyện các mô hình ngôn ngữ lớn nhất thế giới một cách hiệu quả, dựa trên các cơ chế cắt nhỏ mô hình gồm phép toán ma trận, layer của model (Model Parallel)
+Ray Train - scalable machine learning library để quản lý distributed training, tập trung vào Cluster orchestration/runtime
+
+Tiếp theo em sẽ đi sâu vào tìm hiểu sâu hơn các thư viện trên về cơ chế hoạt động, ứng dụng chính.
+
+Thanks,
+Hoang Nguyen
+From: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Sent: Tuesday, May 12, 2026 11:15 PM
+To: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Cảm ơn em đã báo cáo
+Đăng Hải
+From: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Sent: Monday, May 18, 2026 4:01 AM
+To: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Em chào thầy,
+
+Thời gian vừa qua đi sâu vào tìm hiểu sâu hơn các thư viện trên.
+PyTorch Distributed:
+ Data Parallelism (DP):  khởi tạo 1 tiến trình độc lập cho mỗi GPU, Mỗi GPU chứa một bản sao nguyên vẹn của mô hình, dùng DistributedSampler để chia data cho các GPU tính toán độc lập Gradient, sau đó gộp lại bằng thuật toán Bucketed Ring All-Reduce (đóng thùng thành các gói vừa phải và gửi theo ring) để giảm GPU idle.
+Fully Sharded Data Parallelism (FSDP): băm nhỏ toàn bộ trọng số (weights), gradient và trạng thái optimizer rải đều qua các GPU, kiến trúc mô hình vẫn giữ nguyên. Khi cần tính toán một layer cụ thể, GPU sẽ gọi mạng thực hiện thao tác All-Gather để kéo các mảnh trọng số về.  Sau khi hoàn tất tính toán forward/backward pass, dùng Reduce-Scatter để vừa cộng gộp gradient, vừa băm nhỏ phần gradient đó ra trả về đúng cho GPU đang làm chủ quản, rồi xóa data đã xử lí xong để giải phóng VRAM.  (có thể dùng kết hợp DP tạo hybrid Data  Parallelism )
+Pipeline Parallelism (PP): Cắt ngang mô hình thành các chặng theo chiều sâu layer, GPU sau (chứa layer sau) phải chờ kết quả của GPU trước truyền (layer trước) tới mới chạy tiếp được. Sử dụng Point-to-Point (P2P) Send/Receive để giao tiếp/đồng bộ, GPU trước truyền trực tiếp data đã tính sang sang GPU sau, không cần đồng bộ tập thể (All + ...)
+Tensor Parallel (TP): Cắt dọc bản thân các phép toán nhân ma trận bên trong khối Transformer để chia cho các GPU, Các GPU tính toán song song trên cùng một lớp mạng. yêu cầu giao tiếp mạng cực kì lớn do phải đồng bộ hóa kết quả liên tục. Dùng All-Reduce hoặc All-Gather (tùy thuộc vào việc chẻ ma trận theo cột hay theo hàng) để đồng bộ, yêu cầu các GPU cộng gộp kết quả ma trận trung gian ngay lập tức
+
+Context Parallelism (CP): Băm nhỏ context/chuỗi đầu vào bên trong 1 layer để chia cho các GPU xử lí xong xong. Cực kì phức tạp ở lớp Attention vì các ở đoạn 1 vẫn cần phải biết các từ ở đoạn 2. Cần các thuật toán đặc biệt như
+Ring Attention (Mỗi GPU lấy Q của nó nhân với các cặp K V được luân chuyển qua ring để qua 1 vòng nhân với kv của toàn bộ chỗi đầu vào) hoặc
+Ulysses Attention  (cắt theo mức Attention Heads, giao tiếp all-to-all để trao đổi dữ liệu Q K V giữa các GPU nhưng chỉ cho 1 số Head nhất định, lặp lại với các head còn lại, cho phép tái sử dụng lại các hạt nhân (kernels) tính Attention siêu tốc đã có sẵn (như FlashAttention) mà không cần viết lại nhưng bị giới hạn bởi độ chia nhỏ = tổng số lượng Attention Heads của mô hình)
+để giải bài toán tính ma trận Attention xuyên qua các thiết bị.
+
+CP được xử lí qua các dự án/lib thuộc torchtitan hoặc phổ biến hơn là Megatron-LM, DeepSpeed . Tiếp theo em sẽ tìm hiểu sâu các phần này.
+
+Ngoài ra ở cuối thư em có câu hỏi về expected output cuối kì của môn học proj này. Nó sẽ là một proj cần nộp lại hay là một bản báo cáo tổng hợp đầy đủ những gì mình đã tìm hiểu. Nếu là project thì deadline đăng ký đề tài cụ thể và deadline nộp proj là khi nào, với lại đề tài  phải tự chọn hay sẽ được thầy hướng dẫn, gợi ý ạ? Em cảm ơn.
+
+
+Thanks,
+Hoang Nguyen
+From: Nguyen Hoang 20250130E <Hoang.N250130E@sis.hust.edu.vn>
+Sent: Monday, May 25, 2026 5:26 AM
+To: Hai Pham Dang <haipd@soict.hust.edu.vn>
+Subject: Re: Hỏi về đồ án chuyên ngành I
+ 
+Em chào thầy,
+
+Trước tiên cho em hỏi thầy có thể dành chút thời gian để trả lời câu hỏi cuối mail trước được không ạ?
+
+Còn về tiến độ, thời gian vừa qua em tìm hiểu về Deepspeed (Microsoft):
+Deepspeed giới thiệu cơ chế ZeRO(Zero Redundancy Optimizer) 1/2/3, chính là nguồn cảm hứng cho Fully Sharded Data Parallelism (FSDP) sau này bên Pytorch (Meta), nên chúng có cơ chế tương tự nhau, băm nhỏ optimizer-1, gradient-2 và weights-3 ra các GPU.
+ZeRO-Offload/ZeRO-Infinity, phân chia các tham số mô hình rồi offload xuống ... CPU,ram, ssd để vượt qua giới hạn của GPU. 
+DeepSpeed MoE (Mixture of Experts) với cơ chế Expert Parallelism (EP) chia Experts ra các GPU, dùng Gating Network để biết biết nhóm token nào nên gửi đến expert nào rồi dùng All-to-All Communication để gửi các token đến các GPU phù hợp
+(Dịch chuyển dần từ phục vụ tập trung training sang hỗ trợ cả infer/generation)
+DeepSpeed-Chat và RLHF democratization, chạy nhiều loại model cùng một lúc (Actor, Reference, Reward, Critic...), dùng các cơ chế của deepspeed để hỗ trợ multi-model orchestration, Generation-Training Overlap, Generation-centric (tập trung vào bước tạo sinh)
+ZeRO++ tập trung giảm traffic giao tiếp dựa vào Block-based quantization, Quantized Weights, Quantized Gradients
+DeepSpeed Ulysses song song Attention Heads như đã nói ở mail trước
+DeepSpeed-FastGen và inference optimization với Dynamic SplitFuse, prompt/generation scheduling, KV/cache optimization
+(Tối ưu quyết định distributed execution)
+DeepCompile compiler-driven parallelism: Distributed LLM training cần ra rất nhiều decision (tensor parallel size, pipeline split, ZeRO stage, overlap, offload, communication order...), giờ coi distributed training giống compiler optimization, quá trình train Model được convert thành graph, sử dụng các Profiling-Guided Optimization Cycle để tạo các vòng chạy thử , đo đạt đẻ tối ưu graph
+
+Cuối cùng em xin hỏi lại câu hỏi về expected output cuối kì của môn học proj này. Nó sẽ là một proj cần nộp lại hay là một bản báo cáo tổng hợp đầy đủ những gì mình đã tìm hiểu. Nếu là project thì deadline đăng ký đề tài cụ thể và deadline nộp proj là khi nào, với lại đề tài  phải tự chọn hay sẽ được thầy hướng dẫn, gợi ý ạ?
+
+Mong thầy xắp xếp thời gian và trả lời câu hỏi của em từ tuần trước.
+
+Thanks,
+Hoang Nguyen
+
+Nguyen Hoang 20250130E
+
+​Hai Pham Dang <haipd@soict.hust.edu.vn>​
+Em chào thầy,
+
+Trươc tiên cho em hỏi tầm bao giờ thì thầy có thời gian phản hồi report em ạ?
+
+Em hiện đang tìm hiểu về Nvidia/megatron-lm/ Megatron Core, đây là thư viện của nvidia để xây dựng training pipeline. Nó hỗ trợ nhiều parallelism strategies (TP, PP, DP, EP, CP) tương tự như đã nói ở trên, cùng với mixed precision support (FP16, BF16, FP8, FP4), và model architectures.
+Ở đây có thể thấy sự giao nhau của PyTorch Distributed, Deepspeed và megatron, tất cả đều hỗ trợ các chuẩn parallelism strategies. Theo em hiểu nguyên nhân là mỗi bên đi đầu, ra mắt một vài chuẩn chuẩn, sau đó bên khác cũng tích hợp thêm vào hệ sinh thái của mình, cụ thể là:
+
+DP trong Deep Learning có bước tiến quan trọng nhờ kỹ thuật ZeRO do Microsoft/deepspeed công bố vào năm 2020, sau đó được các bên khác thích hợp (vd DDP, FSDP của meta/PyTorch)
+TP Được NVIDIA chính thức giới thiệu và áp dụng quy mô lớn trong báo cáo kỹ thuật Megatron-LM (2019), các bên khác sau tích hợp vào
+PP Được Google công bố đầu tiên qua dự án GPipe (2018), sau đó được cải tiến bởi PipeDream với lịch trình 1F1B (2019 - Microsoft Research và CMU), rồi Nvidia tích hợp vào megatron cùng Interleaved Pipeline.
+        + 1F1B: One Forward, One Backward, sau khi micro-batch đã xong  Forward, lập tức truyên Backward cho batch đó để giảm Pipeline Bubble
+        + Interleaved Pipeline: chia pipeline nhỏ hơn nữa để mỗi GPU sẽ được gán nhiều khối rời rạc đan xen nhau, giảm Pipeline Bubble
+EP được Google giới thiệu qua papers của nhóm Noam Shazeer(2017) và Switch Transformer (2021), rồi DeepSpeed tối ưu với DeepSpeed-MoE (2022)
+CP gồm Ring Attention do UC Berkeley công bố (2023) và DeepSpeed-Ulysses do Microsoft công bố (2023)
+SP (Sequence Parallelism) chia input ra các GPU để tính local computation cho phần đó, sau đó khi cần thông tin toàn cục thì gom data lại bằng all-gather
+
+Quay lại với megatron, họ vừa ra report Scalable Training of Mixture-of-Experts Models with Megatron Core (3-2026) có 1 số điểm thú vị
+Parallel Folding tách rời Attention và MoE để chạy song song, giúp tăng mức độ Expert Parallelism lên cao hơn
+Dynamic Context Parallelism tự động chọn CP size phù hợp cho từng microbatch để hạn chế Compute imbalance
+
+Trên đây là phần tìm hiểu của em, không biết thầy có nhận xét gì không với cả thầy giải đáp thắc mắc giúp em với ạ vì còn vài tuần nữa là hết kỳ rồi, em sợ không kịp ạ!
+"expected output cuối kì của môn học proj này. Nó sẽ là một proj cần nộp lại hay là một bản báo cáo tổng hợp đầy đủ những gì mình đã tìm hiểu. Nếu là project thì deadline đăng ký đề tài cụ thể và deadline nộp proj là khi nào, với lại đề tài  phải tự chọn hay sẽ được thầy hướng dẫn, gợi ý ạ?"
+
+Nếu cần trao đổi chi tiết, em nghĩ cần xắp xếp một buổi gặp trực tiếp để thảo luận cho cụ thể, với em tiện nhất là chiều các ngày t2,t3,t4, không biết với thầy thì sao ạ.
+
+
+Thanks,
+Hoang Nguyen
+
+Nguyen Hoang 20250130E
+
+​Hai Pham Dang <haipd@soict.hust.edu.vn>​
+Em chào thầy,
+
+Thời gian vừa qua em chuyển tìm hiểu sâu hơn về Distributed and Parallel nhưng cho giai đoạn Inference (trước em chủ yếu tìm về trainning).
+Nhìn chung, đây đều là các giai đoạn trong vòng đời của AI software life cycle, đều yêu cầu GPU/VRAM để xử lí và network để communicate giữa các node, đều dùng các cơ chế phân tán TP, PP ,EP, CP, khi model/data không chứa đủ trong 1 GPU. Tuy nhiên nó cũng có nhiều điểm khác mấu chốt về tính chất xử lí, ảnh hưởng trực tiếp đến yêu cầu phần cứng cũng như các kỹ thuật tối ưu, trọng tâm cần ưu tiên khác nhau. Cụ thể là
+
+Training phải học/đi tìm ra bộ trọng số tối ưu, liên tục thử nghiệm đo lường, đồng bộ trong, dữ liệu đầu vào thường ổn định, qua nhiều vòng lặp (epoch, Iteration), còn infer áp dụng từ bộ trọng số đã có đưa ra (các) kết quả dựa vào (các) yêu cầu đầu vào, đầu vào liên tục biến động, đa dạng.
+Với yêu cầu về năng lực tính toán, ở pha train rất phức tạp, cần phải xử lí cả Gradient, Optimizer, Loss calculation, Activation Checkpointing, Backpropagation... cần nhiều năng lực tính toán của con chip GPU, nhưng với infer thì lại không cần, nên compute thấp hơn nhiều, chỉ yếu ở giai đoạn xử lí prefill để lý toàn bộ prompt đầu vào và xây dựng KV cache, còn đến pha sinh token/output thì nhẹ hơn nhiều.
+Về xử lí input, với train chủ yếu là bộ dữ liệu để huấn luyện, có thể chia ra thành cách batch nhỏ nhưng vẫn liên quan đến nhau, đều ảnh hưởng đến model sau cùng nên phải sync nhiều, còn với Inference thì lại có thể đến từ nhiều user request độc lập, rất đa dạng.
+Train Tính toán nhiều nên phải sync nhiều, khác hẳn với infer tính toán ít hơn, request có thể độc lập nên nhìn chung infer yêu cầu giao tiếp, inter node network ít hơn nhiều
+Về bộ nhớ, đều phải lưu model, đều nhiều bộ nhớ vram nhưng ở train áp lực còn đến từ việc lưu lưu lại các giá trị trung gian trong quá trình train, khác hẳn với infer là đến từ KV cache khi context đầu vào và câu trả lời dài, là vấn đề rất phổ biến của infer hiện nay.
+Vì phải xử lí nhiều request nên infer còn phải quan tâm đến các vấn đề như low latency, fast response, time to first token..., còn quá trình train thì do vốn đã dài và tốn thời gian nên ít nhạy cảm hơn.
+
+Từ những điểm khác biệt trêm, em thấy được một số điểm khác biệt trong chiến lược xây dựng, tối ưu, vận hành hai quá trình này
+Về DP dù cả train và infer, cùng là clone toàn bộ model ra nhiều GPU/node Tuy nhiên, cách các bản sao này hoạt động lại trái ngược nhau, với train các gpu phải giao tiếp, sync, xử lí các batch data khác nhau nhưng sau đó phải đồng bộ, 1 gpu chậm hoặc nghẽn là cả bộ, còn với infer vì các bản sao xử lí các request khác nhau nên vấn đề cốt lõi lại ở  Load Balancing & Throughput, không đòi hỏi inter node network cao như khi train
+Vì không tính Gradient, Optimizer, Activation checkpoint..  nên FSDP không được áp dụng trong infer.
+Về yều về độ chính xác dữ liệu, chiến lược Precision, quantization, training phải đảm bảo cả Gradient, Weights, Optimizer, cần tránh Gradient over/underflow, còn với infer thì không có nên ít nhạy cảm với quantization hơn train trong khi lại giảm được áp lực bộ nhớ đi nhiều, giúp tối ưu bộ nhớ và tốc độ sinh output miễn là chất lượng không giảm quá nhiều. Do vậy quantization thường phổ biến trong infer, ở nhiều mức độ khác nhau,  đa dạng tùy yêu cầu đầu ra cũng như request. Quantization trong train chủ yếu chỉ dùng ở bước finetune.
+...
+Em mới chỉ tìm hiểu đến đó, em sẽ tiếp tục tìm hiểu cụ thể các kỹ thuật tối ưu cho các phần trên, có thể là các bài báo liên quan như FlashAttention, DeepSpeed Chat, DeepSpeed-FastGen...
+
+Thanks,
+Hoang Nguyen
+Hai Pham Dang<haipd@soict.hust.edu.vn>
+
+​
+Nguyen Hoang 20250130E​
+Em đã tìm hiểu nhiều rồi. Giờ là giai đoạn viết báo cáo
+- Em gửi cho tôi bản mềm của báo cáo nhé
