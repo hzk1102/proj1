@@ -81,6 +81,10 @@ Dưới đây là sơ đồ tổ chức các file LaTeX nguồn và tài liệu 
   * **CP (Context Parallelism):** Băm nhỏ ngữ cảnh chuỗi đầu vào (Ring Attention, DeepSpeed Ulysses).
   * **EP (Expert Parallelism):** Sử dụng trong các mô hình MoE (Mixture of Experts) thông qua All-to-All.
 * **So sánh Huấn luyện (Training) vs Suy luận (Inference):** So sánh chi tiết về yêu cầu tính toán, áp lực bộ nhớ (Activation Checkpointing vs KV Cache), giao tiếp mạng và các phương pháp tối ưu đặc thù (Quantization).
+* **Tối ưu hóa suy luận (Inference Optimization):**
+  * *Pha Prefill:* FlashAttention (tính toán SRAM), Chunked Prefill (tránh blocking), Prefix Caching (Radix Tree Matching).
+  * *Quản lý KV Cache:* PagedAttention (tránh phân mảnh VRAM), Multi-head Latent Attention (MLA - nén latent), KV Compression/Quantization.
+  * *Pha Decode:* Continuous Batching (iteration-level batching), Speculative Decoding (draft vs target models), Medusa (draft-less), EAGLE (feature-level speculation), Multi-Token Prediction (MTP).
 
 ### Chương 5: Thí nghiệm minh họa (Dự kiến)
 * Khung thí nghiệm dự kiến nhằm kiểm chứng hiệu năng suy luận (Inference) trên mô hình lớn không vừa một GPU đơn lẻ.
