@@ -1,12 +1,41 @@
 \section{Hệ thống huấn luyện và suy luận phân tán}
 
-\subsection{Tổng quan các Framework phân tán}
-Hệ sinh thái mã nguồn mở cho huấn luyện phân tán hiện được dẫn dắt bởi một số framework chủ chốt:
+\subsection{Tổng quan các Framework huấn luyện và Engine suy luận phân tán}
+Hệ sinh thái mã nguồn mở phục vụ cho việc huấn luyện và suy luận các mô hình lớn hiện được dẫn dắt bởi các framework huấn luyện phân tán mạnh mẽ và các engine suy luận chuyên biệt có hiệu năng cao.
+
+\subsubsection{Các Framework huấn luyện phân tán}
+Các framework huấn luyện phân tán chủ chốt bao gồm:
 \begin{itemize}
     \item \textbf{PyTorch Distributed:} Cung cấp sẵn các lớp cơ sở hạ tầng như DDP, FSDP, TP giúp dễ dàng khởi chạy, cắt nhỏ dữ liệu hoặc chia khối mô hình cho các GPU.
     \item \textbf{DeepSpeed từ Microsoft:} Hoạt động như lớp trung gian tối ưu hóa, nổi tiếng với công nghệ ZeRO giúp giảm đáng kể áp lực bộ nhớ. Nó mở rộng từ huấn luyện sang tối ưu hóa suy luận như DeepSpeed-FastGen, DeepSpeed-Chat.
     \item \textbf{Megatron-LM / Megatron Core của NVIDIA:} Mã nguồn tiêu chuẩn công nghiệp cho việc huấn luyện quy mô lớn, tích hợp các kiến trúc song song tiên tiến và hiệu quả nhất cho các chip của NVIDIA.
     \item \textbf{Ray Train:} Quản lý tài nguyên, điều phối quá trình huấn luyện ở quy mô cụm cluster.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{"Figures/Ray train.png"}
+        \caption{Kiến trúc quản lý và điều phối tài nguyên của Ray Train trong huấn luyện phân tán}
+        \label{fig:ray_train}
+    \end{figure}
+\end{itemize}
+
+\subsubsection{Các Engine suy luận phân tán}
+Bên cạnh quá trình huấn luyện, vLLM và SGLang là hai engine mã nguồn mở phục vụ suy luận mô hình lớn hàng đầu hiện nay, tối ưu hóa tốc độ sinh token và hiệu suất sử dụng bộ nhớ:
+\begin{itemize}
+    \item \textbf{vLLM:} Tiên phong đề xuất cơ chế PagedAttention để giải quyết vấn đề phân mảnh bộ nhớ của KV Cache. Engine này cho phép chia nhỏ và quản lý động KV Cache tương tự như cách hệ điều hành quản lý bộ nhớ ảo, giúp tăng đáng kể thông lượng phục vụ đồng thời nhiều yêu cầu sinh văn bản.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Figures/VLLM.png}
+        \caption{Sơ đồ phân bổ và quản lý KV Cache của vLLM sử dụng cơ chế PagedAttention}
+        \label{fig:vllm_engine}
+    \end{figure}
+    
+    \item \textbf{SGLang:} Công cụ tối ưu hóa hiệu năng suy luận thông qua việc giới thiệu ngôn ngữ lập trình có cấu trúc Radix Attention. SGLang tối ưu hóa việc quản lý bộ nhớ KV Cache trên Radix Tree, cho phép chia sẻ KV Cache giữa nhiều tiến trình và yêu cầu có phần tiền tố chung, giúp giảm thời gian sinh token ban đầu và tăng tốc độ xử lý các prompt phức tạp.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{Figures/SGlang.png}
+        \caption{Kiến trúc xử lý Radix Attention và chia sẻ KV Cache của SGLang}
+        \label{fig:sglang_engine}
+    \end{figure}
 \end{itemize}
 
 \subsection{Các chiến lược song song hóa}
