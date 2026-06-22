@@ -50,7 +50,7 @@ Dưới đây là sơ đồ tổ chức các file LaTeX nguồn và tài liệu 
 ## 📖 Tóm tắt nội dung các chương
 
 ### Chương 1: Giới thiệu và cơ sở lý thuyết tính toán song song
-* **Đặt vấn đề:** Sự bùng nổ của Generative AI và LLM đòi hỏi tài nguyên tính toán (VRAM, compute) vượt quá khả năng của một máy đơn lẻ.
+* **Đặt vấn đề:** Sự bùng nổ của Generative AI và các mô hình ngôn ngữ lớn đòi hỏi tài nguyên tính toán vượt quá khả năng của một máy đơn lẻ.
 * **Kiến trúc phần cứng cơ bản:** Tìm hiểu mô hình von Neumann truyền thống và phân loại Flynn (SIMD, MIMD).
 * **Kiến trúc bộ nhớ:** Phân tích mô hình bộ nhớ chia sẻ (Shared Memory), bộ nhớ phân tán (Distributed Memory) và mô hình lai (NUMA - Hybrid).
 
