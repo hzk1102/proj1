@@ -73,5 +73,18 @@ Cấu trúc tính toán thành 3 tầng từ vĩ mô đến vi mô:
 Khi bài toán cần sức mạnh của nhiều GPU, giao tiếp giữa chúng quyết định hiệu năng hệ thống.
 \begin{itemize}
     \item \textbf{NCCL (NVIDIA Collective Communications Library):} Thư viện tối ưu hóa các phép toán giao tiếp tập thể (như All-Reduce, All-Gather) dành riêng cho nền tảng phần cứng NVIDIA (PCIe, NVLink, InfiniBand). NCCL được tích hợp sâu vào PyTorch DDP để đồng bộ gradient.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.65\textwidth]{Figures/NCCL.PNG}
+        \caption{Giao tiếp tập thể sử dụng thư viện NCCL trên nhiều GPU}
+        \label{fig:nccl_comm}
+    \end{figure}
+    
     \item \textbf{NVSHMEM:} Dựa trên tiêu chuẩn OpenSHMEM, NVSHMEM sử dụng mô hình lập trình PGAS (Partitioned Global Address Space) và bộ nhớ vùng nhớ đối xứng (symmetric heap). Với giao tiếp truyền-nhận một phía (Put/Get), một GPU có thể ghi dữ liệu thẳng vào VRAM của GPU khác mà không cần sự can thiệp của CPU, đem lại độ trễ cực thấp dù đòi hỏi kiểm soát đồng bộ khắt khe (Barriers, Atomics).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.65\textwidth]{Figures/NVSHMEM.png}
+        \caption{Mô hình bộ nhớ chia sẻ toàn cục phân vùng PGAS của NVSHMEM}
+        \label{fig:nvshmem_comm}
+    \end{figure}
 \end{itemize}
